@@ -7,9 +7,12 @@ import java.util.Scanner;
 public class Utils {
 
     public static Scanner scanner = new Scanner(System.in);
-    public static String numeroEjercicio = "------Ejercicio numero %s------\n";
     public static String respuesta;
     public static boolean checkVariable = true;
+
+    public static void returnExerciseNumber(int numeroEjercicio){
+        System.out.printf("------Ejercicio numero %s------\n", numeroEjercicio);
+    }
 
     public static void closeScanner() {
         System.out.println("Quiere terminar la ejecucion? (Si/No)");

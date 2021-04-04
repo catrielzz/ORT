@@ -6,16 +6,18 @@ import java.util.Scanner;
 
 import ort.edu.ar.utils.Utils;
 
+import javax.rmi.CORBA.Util;
+
 public class Tp1 {
 
     public void ejercicio1() {
-        System.out.printf(Utils.numeroEjercicio, 1);
+        Utils.returnExerciseNumber(1);
         System.out.println("Bienvenido " + Utils.checkVariableString("su nombre", "un nombre valido"));
         Utils.closeScanner();
     }
 
     public void ejercicio2() {
-        System.out.printf(Utils.numeroEjercicio, 2);
+        Utils.returnExerciseNumber(2);
         int materia1;
         int materia2;
         int materia3;
@@ -29,7 +31,7 @@ public class Tp1 {
 
     public void ejercicio3() {
         int numeroIngresado;
-        System.out.printf(Utils.numeroEjercicio, 3);
+        Utils.returnExerciseNumber(3);
         numeroIngresado = Utils.checkVariableInt("un numero", "un numero valido");
         System.out.println("El numero * 5 = " + (numeroIngresado * 5) + "\nEl numero / 2 = " + (numeroIngresado / 2));
         Utils.closeScanner();
@@ -39,7 +41,7 @@ public class Tp1 {
         int cantidadHoras;
         double valorHoras;
         double salarioTotal;
-        System.out.printf(Utils.numeroEjercicio, 4);
+        Utils.returnExerciseNumber(4);
         cantidadHoras = Utils.checkVariableInt("la cantidad de horas trabajadas por día", "un numero valido");
         System.out.println("Ingrese el valor de cada hora: ");
         valorHoras = Utils.scanner.nextInt();
@@ -49,7 +51,7 @@ public class Tp1 {
     }
 
     public void ejercicio5() throws InterruptedException {
-        System.out.printf(Utils.numeroEjercicio, 5);
+        Utils.returnExerciseNumber(5);
         System.out.println("Ingrese el primer numero: ");
         int num1 = Utils.scanner.nextInt();
         System.out.println("Ingrese el segundo numero: ");
@@ -65,7 +67,7 @@ public class Tp1 {
     }
 
     public void ejercicio6() {
-        System.out.printf(Utils.numeroEjercicio, 6);
+        Utils.returnExerciseNumber(6);
         final int sueldoFijo = 44000;
         final double comision = 0.16;
         System.out.println("Ingrese el monto total de ventas realizadas en el mes: ");
@@ -75,7 +77,7 @@ public class Tp1 {
     }
 
     public void ejercicio7() {
-        System.out.printf(Utils.numeroEjercicio, 7);
+        Utils.returnExerciseNumber(7);
         System.out.println("Ingrese el ancho del terreno: ");
         double anchoTerreno = Utils.scanner.nextDouble();
         System.out.println("Ingrese el alto del terreno: ");
@@ -90,7 +92,7 @@ public class Tp1 {
     }
 
     public void ejercicio8() {
-        System.out.printf(Utils.numeroEjercicio, 8);
+        Utils.returnExerciseNumber(8);
         System.out.println("Ingrese el primer numero: ");
         double num1 = Utils.scanner.nextDouble();
         System.out.println("Ingrese el segundo numero: ");
@@ -103,7 +105,7 @@ public class Tp1 {
         Utils.closeScanner();
     }
 
-    public void ejercicio9() {
+    public void ejercicio32() {
         // 1 y 3 no se usan, 2, (4 - 10) se usan
         List<Integer> unindexedList = new ArrayList<Integer>();
         int cant;
@@ -132,5 +134,17 @@ public class Tp1 {
         while (cant > 0);
         System.out.println(unindexedList);
         Utils.getNumberAndPosition(unindexedList);
+    }
+
+    public void ejercicio9(){
+        double primerAngulo;
+        double segundoAngulo;
+        double tercerAngulo;
+        Utils.returnExerciseNumber(9);
+        primerAngulo = Utils.checkVariableDouble("el valor del primer angulo", "valor de angulo valido");
+        segundoAngulo = Utils.checkVariableDouble("el valor del segundo angulo", "valor de angulo valido");
+        // crear calculo del 3er angulo
+        tercerAngulo = (180 - (primerAngulo + segundoAngulo));
+        System.out.println(tercerAngulo);
     }
 }
